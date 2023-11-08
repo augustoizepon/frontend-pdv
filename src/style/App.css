@@ -1,0 +1,85 @@
+.App {
+  background-color: rgb(0, 61, 114);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: aliceblue;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 7rem;
+  align-items: center;
+  height: 60%;
+}
+
+
+.main-div {
+  width: 300px;
+  border-radius: 20px;
+  border: solid 3px aliceblue;
+  background-color: rgb(0, 61, 114);
+  color: aliceblue;
+  text-align: center;
+  font-size: 25px;
+  
+  transition: ease 0.4s;
+ height: fit-content;
+ max-height: 500px;
+ display: flex;
+ flex-direction: column;
+ padding: 10px;
+ overflow-y: scroll;
+}
+
+.Register-form-div, .Login-form-div{
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgb(0, 61, 114);
+
+}
+
+input{
+  background-color: white;
+  padding: 4px;
+  border: 2px solid rgb(0, 61, 114);
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+.btn-l-r {
+  background-color: rgb(0, 61, 114);
+  border: 3px solid aliceblue;
+  color: aliceblue;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-l-r:hover{
+  color: rgb(0, 61, 114);
+  background-color: aliceblue;
+  border-color: rgb(0, 61, 114);
+}
+
+.main-div:hover{
+  background-color: aliceblue;
+  color: rgb(0, 61, 114);
+}
+ul{
+  list-style-type: none;
+  text-align: start;
+}
