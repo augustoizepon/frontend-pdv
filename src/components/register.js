@@ -22,12 +22,12 @@ function Register() {
           senha: formData.password,
         };
 
-        const response = await axios.post(process.env.SITE_REGISTER, dataToSend);
+        const response = await axios.post('https://backendfrentedeloja.onrender.com/usuario', dataToSend);
         console.log(response)
-        // setServerResponse(response.data.message);
+        setServerResponse(response.data.message);
       } catch (error) {
         console.log(error);
-        // setServerResponse(error.response.data.message);
+        setServerResponse(error.response.data.message);
       }
     } else {
       // Senhas não coincidem, trate esse caso conforme necessário

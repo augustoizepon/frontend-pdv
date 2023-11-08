@@ -25,7 +25,7 @@ function ProfileUpdate({ token }) {
 
     try {
      
-      const response = await axios.put(process.env.SITE_UPDATE, userData, {
+      const response = await axios.put('https://backendfrentedeloja.onrender.com/usuario', userData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

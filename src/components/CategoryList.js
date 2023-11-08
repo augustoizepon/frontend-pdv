@@ -8,7 +8,7 @@ function CategoryList({ token }) {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await axios.get(process.env.SITE_CATEGORIES_LIST, {
+        const response = await axios.get('https://backendfrentedeloja.onrender.com/categoria', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

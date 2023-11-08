@@ -20,7 +20,7 @@ function Login() {
         email: formData.email,
         senha: formData.password,
       };
-      const response = await axios.post(process.env.SITE_LOGIN, dataToSend);
+      const response = await axios.post('https://backendfrentedeloja.onrender.com/login', dataToSend);
 
       setLoginMessage(response.data.message);
       setToken(response.data.token);
