@@ -26,7 +26,7 @@ function Register() {
         console.log(response)
         setServerResponse(response.data.message);
       } catch (error) {
-        console.log();
+        console.log(error);
         setServerResponse(error.response.data.message);
       }
     } else {

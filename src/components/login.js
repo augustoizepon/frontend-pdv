@@ -27,6 +27,7 @@ function Login() {
       setShowLogin(false);
       setShowCategories(true);
     } catch (error) {
+      console.log(error);
       setLoginMessage(error.response.data.message);
     }
   }

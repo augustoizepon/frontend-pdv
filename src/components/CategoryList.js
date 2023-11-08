@@ -15,6 +15,7 @@ function CategoryList({ token }) {
         });
         setCategories(response.data);
       } catch (error) {
+        console.log(error);
         console.error('Erro ao obter categorias', error);
       }
     };
