@@ -41,7 +41,7 @@ h1 {
  display: flex;
  flex-direction: column;
  padding: 10px;
- overflow-y: scroll;
+ overflow-y: hidden;
 }
 
 .Register-form-div, .Login-form-div{
