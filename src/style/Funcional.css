@@ -1,0 +1,23 @@
+.Funcional-div{
+    background-color: rgb(172, 215, 253);
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow-y: scroll;
+}
+.Funcional-div-list{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li{
+    height: fit-content;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

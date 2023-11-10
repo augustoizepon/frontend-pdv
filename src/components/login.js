@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import ProfileUpdate from './ProfileUpdate';
-import CategoryList from './CategoryList';
-
+let loginMessage = ''
+let token = ''
 function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
   });
-
-  const [loginMessage, setLoginMessage] = useState('');
-  const [token, setToken] = useState('');
-  const [showCategories, setShowCategories] = useState(false);
   const [showLogin, setShowLogin] = useState(true);
 
   async function sendLoginData() {
@@ -22,13 +17,12 @@ function Login() {
       };
       const response = await axios.post('https://backendfrentedeloja.onrender.com/login', dataToSend);
 
-      setLoginMessage(response.data.message);
-      setToken(response.data.token);
+      loginMessage = response.data.message
+      token = response.data.token
       setShowLogin(false);
-      setShowCategories(true);
     } catch (error) {
       console.log(error);
-      setLoginMessage(error.response.data.message);
+      loginMessage = error.response.data.message;
     }
   }
 
@@ -61,10 +55,13 @@ function Login() {
           <p>{loginMessage}</p>
         </div>
       )}
-      {loginMessage === 'Logado com sucesso!' && <ProfileUpdate token={token} />}
-      {showCategories && <CategoryList token={token} />}
     </div>
   );
+  
 }
 
+
+
+export {token}
 export default Login;
+export {loginMessage}

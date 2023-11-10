@@ -6,14 +6,26 @@
 }
 
 .App-header {
+  background-color: rgb(0, 44, 82);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 60px;
+ 
+}
+
+.App-header-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 h1 {
   color: aliceblue;
+  text-align: center;
+  position: relative;
+  top: -15px;
 }
 
 .App-main {
@@ -22,7 +34,9 @@ h1 {
   justify-content: center;
   gap: 7rem;
   align-items: center;
-  height: 60%;
+  height: calc(100vh - 100px);
+  width: 100%;
+  padding: 0;
 }
 
 
@@ -33,25 +47,25 @@ h1 {
   background-color: rgb(0, 61, 114);
   color: aliceblue;
   text-align: center;
-  font-size: 25px;
-  
+  font-size: 20px;
   transition: ease 0.4s;
- height: fit-content;
- max-height: 500px;
- display: flex;
- flex-direction: column;
- padding: 10px;
- overflow-y: scroll;
+  height: fit-content;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 4;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.534);
 }
 
-.Register-form-div, .Login-form-div{
+.Register-form-div,
+.Login-form-div {
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgb(0, 61, 114);
-
 }
 
-input{
+input {
   background-color: white;
   padding: 4px;
   border: 2px solid rgb(0, 61, 114);
@@ -69,17 +83,22 @@ input{
   cursor: pointer;
 }
 
-.btn-l-r:hover{
+.btn-l-r:hover {
   color: rgb(0, 61, 114);
   background-color: aliceblue;
   border-color: rgb(0, 61, 114);
 }
 
-.main-div:hover{
+.main-div:hover {
   background-color: aliceblue;
   color: rgb(0, 61, 114);
 }
-ul{
+
+ul {
   list-style-type: none;
   text-align: start;
+}
+
+p {
+  margin: 0;
 }
