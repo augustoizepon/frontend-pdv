@@ -20,6 +20,7 @@ function App() {
     setLoginVisible(false);
     setRegisterVisible(true);
   }
+
   function handleClickOutside(event) {
     if (event.target.closest('#Login-div') || event.target.closest('#SignUp-div')) {
       return;
@@ -53,7 +54,7 @@ function App() {
         </div>
       </header>
       <main className='App-main'>
-      {loginMessage=== 'Logado com sucesso!' & <Funcional/>}
+      {loginMessage === 'Logado com sucesso!' && <Funcional/>}
 
 
       </main>
